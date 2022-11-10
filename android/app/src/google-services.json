@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "726928969708",
+    "project_id": "test2-e4128",
+    "storage_bucket": "test2-e4128.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726928969708:android:5b7cb1fdcade3def593ac9",
+        "android_client_info": {
+          "package_name": "com.example.doan_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726928969708-r2f06s3a30kk7jh6qffil5j75rinvq6t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTlVQ00i2cF7WTXoW_VFNUzTG8rKcRhv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726928969708-r2f06s3a30kk7jh6qffil5j75rinvq6t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
