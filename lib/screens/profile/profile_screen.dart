@@ -1,10 +1,11 @@
 // ignore_for_file: depend_on_referenced_packages, unused_import, prefer_const_constructors, non_constant_identifier_names, sort_child_properties_last, file_names
 
-import 'package:doan_flutter/components/profile/change_password_screen.dart';
-import 'package:doan_flutter/components/profile/edit_profile_screen.dart';
-import 'package:doan_flutter/components/profile/private_information_screen.dart';
+import 'package:doan_flutter/screens/profile/private_information_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+
+import 'change_password_screen.dart';
+import 'edit_profile_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
