@@ -1,12 +1,11 @@
 // ignore_for_file: unnecessary_import, use_key_in_widget_constructors, file_names, prefer_const_constructors, unused_local_variable, unused_field, depend_on_referenced_packages, unused_label, unnecessary_null_comparison, unused_import
 
 //import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({super.key});
-
   @override
   State<StatefulWidget> createState() {
     return RegisterScreenState();
@@ -18,7 +17,7 @@ class RegisterScreenState extends State<RegisterScreen> {
   TextEditingController txtEmail = TextEditingController();
   TextEditingController txtPass = TextEditingController();
   TextEditingController txtConfirmPass = TextEditingController();
-  //final _auth = FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance;
   bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
@@ -181,25 +180,22 @@ class RegisterScreenState extends State<RegisterScreen> {
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Material(
         child: MaterialButton(
-          onPressed: () {
-            /* onPressed:
-            () async {
-              try {
-                final newUser = _auth.createUserWithEmailAndPassword(
-                  email: txtUsername.text,
-                  password: txtPass.text,
-                );
-                if (newUser != null) {
-                  Navigator.pop(context, 'Đăng ký thành công');
-                } else {
-                  final snackBar = SnackBar(content: Text('Không thành công'));
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                }
-              } catch (e) {
-                final snackBar = SnackBar(content: Text('Có lỗi xảy ra'));
+          onPressed: () async {
+            try {
+              final newUser = _auth.createUserWithEmailAndPassword(
+                email: txtUsername.text,
+                password: txtPass.text,
+              );
+              if (newUser != null) {
+                Navigator.pop(context, 'Đăng ký thành công');
+              } else {
+                final snackBar = SnackBar(content: Text('Không thành công'));
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
               }
-            }; */
+            } catch (e) {
+              final snackBar = SnackBar(content: Text('Có lỗi xảy ra'));
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            }
           },
           shape: RoundedRectangleBorder(
               //borderRadius: BorderRadius.circular(30),

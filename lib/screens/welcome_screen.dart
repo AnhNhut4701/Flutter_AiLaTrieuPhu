@@ -4,10 +4,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import '../login/login_screen.dart';
+import 'login/login_screen.dart';
 
 class WelcomScreen extends StatefulWidget {
-  const WelcomScreen({super.key});
   @override
   State<StatefulWidget> createState() {
     return WelcomScreenState();

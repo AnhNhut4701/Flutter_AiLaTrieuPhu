@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "878460368040",
+    "project_id": "ai-la-trieu-phu-3a9d6",
+    "storage_bucket": "ai-la-trieu-phu-3a9d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878460368040:android:a40fbaca1360dc71b43e9d",
+        "android_client_info": {
+          "package_name": "com.example.ailatrieuphu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878460368040-gu45f0ihhg2r0lnauaumu8cc0j83ejfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgIzWqGkvARMGCtrLcO1-i2W7PB_xb9ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878460368040-gu45f0ihhg2r0lnauaumu8cc0j83ejfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

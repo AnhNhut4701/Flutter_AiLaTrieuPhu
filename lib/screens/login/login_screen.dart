@@ -1,15 +1,15 @@
-// ignore_for_file: unused_import, duplicate_import, unnecessary_import, prefer_const_constructors, duplicate_ignore, file_names, non_constant_identifier_names, unused_local_variable, sort_child_properties_last
+// ignore_for_file: unused_import, duplicate_import, unnecessary_import, prefer_const_constructors, duplicate_ignore, file_names, non_constant_identifier_names, unused_local_variable, sort_child_properties_last, use_key_in_widget_constructors, unused_field, no_leading_underscores_for_local_identifiers, empty_catches
 
 import 'dart:async';
-import 'package:doan_flutter/components/home/home_screen.dart';
+
+import 'package:doan_flutter/screens/home_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../forgot_password/forgot_password_screen.dart';
+import '../forgot_password_screen.dart';
 import '../menu_tabs/menu_tabs_screen.dart';
-import '../register/register_screen.dart';
+import '../register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
-
   @override
   State<StatefulWidget> createState() {
     return LoginScreenState();
@@ -17,8 +17,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
-  TextEditingController txtUsername = TextEditingController();
+  TextEditingController txtEmail = TextEditingController();
   TextEditingController txtPass = TextEditingController();
+  final _auth = FirebaseAuth.instance;
   bool remember = false;
   bool _obscureText = true;
 
@@ -38,10 +39,11 @@ class LoginScreenState extends State<LoginScreen> {
     Widget sizeboxSection1 = const SizedBox(height: 10);
     Widget sizeboxSection2 = const SizedBox(height: 40);
     Widget usernameSection = TextFormField(
-      controller: txtUsername,
+      controller: txtEmail,
+      keyboardType: TextInputType.emailAddress,
       validator: (val) => val!.isEmpty ? 'Tên đăng nhập không hợp lệ' : null,
       decoration: InputDecoration(
-        hintText: 'Tên đăng nhập',
+        hintText: 'Email',
         prefixIcon: const Padding(
           padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
           child: Icon(
@@ -114,13 +116,40 @@ class LoginScreenState extends State<LoginScreen> {
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Material(
         child: MaterialButton(
-          onPressed: () {
-            Navigator.push(
+          onPressed: () async {
+            /* Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => MenuTabScreen(),
               ),
-            );
+            ); */
+            try {
+              final _user = _auth.signInWithEmailAndPassword(
+                  email: txtEmail.text, password: txtPass.text);
+              _auth.authStateChanges().listen(
+                (event) {
+                  if (event != null) {
+                    txtEmail.clear();
+                    txtPass.clear();
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      'home',
+                      (route) => false,
+                    );
+                  } else {
+                    final snackBar = SnackBar(
+                      content: Text('Email hoặc mật khẩu không đúng'),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
+                },
+              );
+            } catch (e) {
+              final snackBar = SnackBar(
+                content: Text('Lỗi kết nối đến server'),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            }
           },
           shape: RoundedRectangleBorder(
               //borderRadius: BorderRadius.circular(30),

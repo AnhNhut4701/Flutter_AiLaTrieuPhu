@@ -1,12 +1,13 @@
 // ignore_for_file: prefer_final_fields, prefer_const_constructors
 
-import 'package:doan_flutter/components/credit/credit_screen.dart';
-import 'package:doan_flutter/components/games/games_screen.dart';
-import 'package:doan_flutter/components/games_history/history_screen.dart';
-import 'package:doan_flutter/components/home/home_screen.dart';
-import 'package:doan_flutter/components/profile/profile_screen.dart';
-import 'package:doan_flutter/components/ranks/ranks_screen.dart';
+
 import 'package:flutter/material.dart';
+
+import '../credit_screen.dart';
+import '../games_screen.dart';
+import '../home_screen.dart';
+import '../profile/profile_screen.dart';
+import '../ranks_screen.dart';
 
 class MenuTabScreen extends StatefulWidget {
   const MenuTabScreen({super.key});

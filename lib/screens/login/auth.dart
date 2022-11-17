@@ -5,7 +5,7 @@ import "dart:convert";
 import "package:http/http.dart" as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../url/url.dart';
+import '../url.dart';
 
 class Auth {
   static Future<http.Response> register(String taikhoan, String matkhau,
