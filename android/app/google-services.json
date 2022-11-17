@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "878460368040",
-    "project_id": "ai-la-trieu-phu-3a9d6",
-    "storage_bucket": "ai-la-trieu-phu-3a9d6.appspot.com"
+    "project_number": "651192967293",
+    "project_id": "doan-flutter-cd9dd",
+    "storage_bucket": "doan-flutter-cd9dd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:878460368040:android:a40fbaca1360dc71b43e9d",
+        "mobilesdk_app_id": "1:651192967293:android:160f078e81498f66245114",
         "android_client_info": {
-          "package_name": "com.example.ailatrieuphu"
+          "package_name": "com.example.doan_flutter"
         }
       },
       "oauth_client": [
         {
-          "client_id": "878460368040-gu45f0ihhg2r0lnauaumu8cc0j83ejfa.apps.googleusercontent.com",
+          "client_id": "651192967293-mqd9gvleb908ta7ht2mt3gcknbfsmmj1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCgIzWqGkvARMGCtrLcO1-i2W7PB_xb9ds"
+          "current_key": "AIzaSyCFEnuPSguDru7BXEDLX85dmevIH61Gi-Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "878460368040-gu45f0ihhg2r0lnauaumu8cc0j83ejfa.apps.googleusercontent.com",
+              "client_id": "651192967293-mqd9gvleb908ta7ht2mt3gcknbfsmmj1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

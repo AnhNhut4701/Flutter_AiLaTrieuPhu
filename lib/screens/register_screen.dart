@@ -193,7 +193,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
               }
             } catch (e) {
-              final snackBar = SnackBar(content: Text('Có lỗi xảy ra'));
+              final snackBar = SnackBar(content: Text('Có lỗi xảy ra!'));
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
             }
           },

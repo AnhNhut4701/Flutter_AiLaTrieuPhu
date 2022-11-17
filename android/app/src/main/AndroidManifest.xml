@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ailatrieuphu">
+    package="com.example.doan_flutter">
    <application
         android:label="doan_flutter"
         android:name="${applicationName}"
