@@ -135,11 +135,11 @@ class RegisterScreenState extends State<RegisterScreen> {
     );
 
     Widget confirmpasswordSection = TextFormField(
-      controller: txtPass,
+      controller: txtConfirmPass,
       obscureText: _obscureText,
       validator: (val) => val!.length < 6 ? 'Required at least 6 chars' : null,
       decoration: InputDecoration(
-        hintText: 'Mật khẩu',
+        hintText: 'Nhập lại mật khẩu',
         prefixIcon: const Padding(
           padding: EdgeInsets.fromLTRB(10, 20, 10, 20),
           child: Icon(
@@ -183,7 +183,7 @@ class RegisterScreenState extends State<RegisterScreen> {
           onPressed: () async {
             try {
               final newUser = _auth.createUserWithEmailAndPassword(
-                email: txtUsername.text,
+                email: txtEmail.text,
                 password: txtPass.text,
               );
               if (newUser != null) {

@@ -117,12 +117,6 @@ class LoginScreenState extends State<LoginScreen> {
       child: Material(
         child: MaterialButton(
           onPressed: () async {
-            /* Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => MenuTabScreen(),
-              ),
-            ); */
             try {
               final _user = _auth.signInWithEmailAndPassword(
                   email: txtEmail.text, password: txtPass.text);
