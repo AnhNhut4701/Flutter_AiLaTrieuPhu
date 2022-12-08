@@ -1,30 +1,29 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: use_key_in_widget_constructors
 
-import 'package:doan_flutter/screens/home_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/welcome_screen.dart';
+import 'home_screen.dart';
+import 'welcome_screen.dart';
 
 Future<void> main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(AiLaTrieuPhu());
+  runApp(YakoApp());
 }
 
-class AiLaTrieuPhu extends StatelessWidget {
+class YakoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ai Là Triệu Phú',
+      title: 'Yako App',
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      initialRoute: 'welcome',
+      initialRoute: 'Welcome',
       routes: {
-        'welcome': (context) => WelcomScreen(),
+        'Welcome': (context) => WelcomeScreen(),
         'home': (context) => HomeScreen(),
       },
-      home: WelcomScreen(),
     );
   }
 }

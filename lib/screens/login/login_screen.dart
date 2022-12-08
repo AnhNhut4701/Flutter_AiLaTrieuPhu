@@ -2,12 +2,12 @@
 
 import 'dart:async';
 
+import 'package:doan_flutter/register_screen.dart';
 import 'package:doan_flutter/screens/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../forgot_password_screen.dart';
 import '../menu_tabs/menu_tabs_screen.dart';
-import '../register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

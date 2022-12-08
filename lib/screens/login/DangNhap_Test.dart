@@ -1,4 +1,6 @@
-// ignore_for_file: depend_on_referenced_packages, file_names, prefer_const_constructors, non_constant_identifier_names, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, duplicate_ignore, void_checks
+// ignore_for_file: file_names
+
+/* // ignore_for_file: depend_on_referenced_packages, file_names, prefer_const_constructors, non_constant_identifier_names, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, duplicate_ignore, void_checks
 
 import 'dart:convert';
 
@@ -296,3 +298,4 @@ class LoginState extends State<Login> {
     );
   }
 }
+ */

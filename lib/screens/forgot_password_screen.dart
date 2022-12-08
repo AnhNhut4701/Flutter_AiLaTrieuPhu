@@ -1,8 +1,7 @@
 // ignore_for_file: unused_import, file_names, prefer_const_constructors, override_on_non_overriding_member, annotate_overrides, unused_local_variable
 
+import 'package:doan_flutter/register_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'register_screen.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});

@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, depend_on_referenced_packages, file_names, unused_local_variable, prefer_interpolation_to_compose_strings
+/* // ignore_for_file: avoid_print, depend_on_referenced_packages, file_names, unused_local_variable, prefer_interpolation_to_compose_strings
 
 import "dart:convert";
 
@@ -98,3 +98,4 @@ Future<String> getToken() async {
   SharedPreferences pref = await SharedPreferences.getInstance();
   return pref.getString('token') ?? '';
 }
+ */

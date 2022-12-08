@@ -2,9 +2,8 @@
 
 import 'dart:html';
 
+import 'package:doan_flutter/register_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../register_screen.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
